@@ -1,0 +1,10 @@
+{
+    "graphs": {
+        "bench": "./src/pipeline/graph.py:build_graph"
+    },
+    "env": ".env",
+    "python_version": "3.11",
+    "dependencies": [
+        "."
+    ]
+}

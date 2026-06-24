@@ -27,3 +27,11 @@ Thumbs.db
 
 # Claude Code
 .claude/
+
+# LangGraph Studio
+.langgraph_api/
+
+# Package builds
+*.egg-info/
+dist/
+build/

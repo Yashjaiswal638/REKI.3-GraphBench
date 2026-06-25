@@ -1,0 +1,23 @@
+# REKI.3 GraphBench Configuration
+
+llm:
+  model: "deepseek-coder"
+  api_key_path: "config/key_API.json"
+  base_url: "https://api.deepseek.com"
+  temperature: 0.0
+
+simulation:
+  iverilog_path: "iverilog"
+  vvp_path: "vvp"
+  timeout: 60
+
+pipeline:
+  debug_max: 5
+  reboot_after: 1
+
+dataset:
+  path: "data/HDLBits_data.jsonl"
+  mutant_path: "data/HDLBits_data_mutants.jsonl"
+
+output:
+  save_dir: "runs"

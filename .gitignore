@@ -17,6 +17,7 @@ key_API.json
 .env*
 
 # Simulation artifacts
+runs/
 *.vcd
 *.vvp
 *.log

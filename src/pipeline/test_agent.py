@@ -18,24 +18,29 @@ def init_state(prob):
     }
 
 if __name__ == "__main__":
-    # Skip already-completed problems
-    skip_set = set()
-    results_path = "../results/graph_results.json"
+    hang = {"lemmings4", "gshare", "review2015_fancytimer", "lemmings3",
+            "circuit10", "review2015_fsm", "2013_q2bfsm", "fsm_ps2data",
+            "ece241_2013_q8"}
+
+    # Resume: load already-completed problems so we don't re-run (and re-pay) them
+    results = []
+    results_path = "../results/agent_results.json"
     if os.path.exists(results_path):
         with open(results_path) as f:
-            for r in json.load(f):
-                skip_set.add(r["task_id"])
+            results = json.load(f)
+    done = {r["task_id"] for r in results}
+    if done:
+        print(f"Resuming: {len(done)} problems already in {results_path} — skipping them.")
 
-    # Skip already-done + problems that hang DeepSeek (too large)
-    hang_set = {"lemmings4", "gshare", "review2015_fancytimer", "lemmings3",
-                "circuit10", "review2015_fsm", "2013_q2bfsm", "fsm_ps2data"}
-    skip_set.update(hang_set)
-
+    # Last 15 of the 156, minus the 9 that hang DeepSeek and the done set
     with open("../data/HDLBits/HDLBits_data.jsonl") as f:
         problems = [json.loads(line) for line in f.readlines()]
-        problems = [p for p in problems if p["task_id"] not in skip_set]  # all
+        problems = [p for p in problems[-15:]
+                    if p["task_id"] not in hang and p["task_id"] not in done]
 
-    results = []
+    if not problems:
+        print("No problems left to run — benchmark already complete.")
+        exit(0)
     for i, prob in enumerate(problems):
         print(f"\n{'='*60}")
         print(f"PROBLEM {i+1}/{len(problems)}: {prob['task_id']}")
@@ -67,14 +72,14 @@ if __name__ == "__main__":
     cmb = sum(1 for r in results if r.get("circuit_type") == "CMB")
     seq = sum(1 for r in results if r.get("circuit_type") == "SEQ")
     print(f"\n{'='*60}")
-    print(f"SUMMARY: {passed}/{len(results)} sim passed ({passed/len(results)*100:.1f}%)" if results else "SUMMARY: 0")
+    print(f"OVERALL SUMMARY (incl. resumed): {passed}/{len(results)} sim passed ({passed/len(results)*100:.1f}%)" if results else "SUMMARY: 0")
     print(f"Eval2: {eval2}/{len(results)}, CMB: {cmb}, SEQ: {seq}")
 
     # Save
     save_path = "../results/agent_results.json"
     os.makedirs("../results", exist_ok=True)
     with open(save_path, "w") as f:
-        json.dump([{k: r[k] for k in ["task_id","circuit_type","sim_passed",
+        json.dump([{k: r.get(k) for k in ["task_id","circuit_type","sim_passed",
             "eval0_passed","eval1_passed","eval2_passed","eval2_mutant_ratio",
             "debug_iter","reboot_count"]} for r in results], f, indent=2)
     print(f"[Saved to {save_path}]")

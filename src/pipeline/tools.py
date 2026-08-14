@@ -3,7 +3,7 @@ from pipeline.graph import (
     classify_node, spec_node, scenarios_node, rules_node,
     driver_cmb_node, checklist_node, checker_cmb_node,
     driver_seq_node, stage4b_node, checker_seq_node,
-    simulation_node, debug_node, reboot_node, eval_node,
+    simulation_node, debug_node, reboot_node, eval_node, vcd_node,
 )
 
 TOOLS = {
@@ -62,5 +62,9 @@ TOOLS = {
     "eval": {
         "fn": eval_node,
         "desc": "Run Eval0/1/2 quality checks. Call LAST after simulation passes or gives up."
+    },
+    "diagnose": {
+        "fn": vcd_node,
+        "desc": "Analyze simulation signal data to find root cause of failure. Call when simulate fails — BEFORE debug, to understand WHY it failed."
     },
 }

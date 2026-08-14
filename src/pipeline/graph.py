@@ -1,4 +1,4 @@
-"""StateGraph definition for GraphBench pipeline."""
+﻿"""StateGraph definition for GraphBench pipeline."""
 import os
 import sys
 import json
@@ -22,9 +22,23 @@ from pipeline.prompts import *
 from langchain_openai import ChatOpenAI
 import json as json_module
 
+VCD_ENABLED = True   # True = use .vcd waveform files, False = use TBout.txt
+
 SIGNALTEMP_PLACEHOLDER_1 = "/* SIGNAL TEMPLATE 1 */"
 SIGNALTEMP_PLACEHOLDER_1A = "/* SIGNAL TEMPLATE 1A */"
 SIGNALTEMP_PLACEHOLDER_1B = "/* SIGNAL TEMPLATE 1B */"
+
+# VCD dumpfile instruction (appended to driver prompts when VCD_ENABLED)
+VCD_INSTRUCTION = """
+CRITICAL: You MUST add these lines at the start of the initial block:
+$dumpfile("dump.vcd");
+$dumpvars(0, testbench);
+This generates a waveform file for debugging."""
+VCD_INSTRUCTION_SEQ = """
+CRITICAL: You MUST add these lines at the start of the initial block (before the scenario code):
+$dumpfile("dump.vcd");
+$dumpvars(0, testbench);
+This generates a waveform file for debugging."""
 
 # Pre-load mutant + golden TB lookup (built once at import, used by eval_node)
 _MUTANT_LOOKUP = {}
@@ -64,9 +78,9 @@ def get_llm():
     )
 
 
-# ═══════════════════════════════════════════════════
+# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 # Node Functions
-# ═══════════════════════════════════════════════════
+# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 def classify_node(state: BenchState) -> dict:
     """Stage 0: Classify circuit as CMB or SEQ."""
@@ -82,22 +96,6 @@ def classify_node(state: BenchState) -> dict:
     circuit_type = circuit_type_by_code(code)
     print(f"[{task_id}] Circuit type: {circuit_type}")
     return {"circuit_type": circuit_type}
-
-
-# def spec_node(state: BenchState) -> dict:
-#     task_id = state["task_id"]
-#     print(f"[{task_id}] Stage 1: Generating spec...")
-#     prompt = SPEC_PROMPT.format(
-#         problem_description=state["problem_description"],
-#         dut_header=state["dut_header"]
-#     )
-#     response, info = llm_call(
-#         [{"role": "user", "content": prompt}],
-#         model="deepseek-coder",
-#         api_key_path="../config/key_API.json",
-#         base_url="https://api.deepseek.com"
-#     )
-#     return {"spec": response}
 
 def spec_node(state: BenchState) -> dict:
     task_id = state["task_id"]
@@ -141,7 +139,7 @@ def rules_node(state: BenchState) -> dict:
     return {"golden_rules": response.content}
 
 
-# ── CMB Path ──
+# â”€â”€ CMB Path â”€â”€
 
 def driver_cmb_node(state: BenchState) -> dict:
     """Stage 4 CMB: Generate Verilog driver testbench."""
@@ -167,6 +165,8 @@ def driver_cmb_node(state: BenchState) -> dict:
     prompt += "RTL testbench specification:\n" + state["spec"] + "\n\n"
     prompt += "IMPORTANT - test scenario:\n" + state["scenarios"] + "\n\n"
     prompt += txt2
+    if VCD_ENABLED:
+        prompt += VCD_INSTRUCTION
 
     llm = get_llm()
     response = llm.invoke(prompt)
@@ -176,15 +176,14 @@ def driver_cmb_node(state: BenchState) -> dict:
 
 
 def checklist_node(state: BenchState) -> dict:
-    """Verify all planned scenarios appear in driver. Pre-checks with regex before calling LLM."""
+    """Verify all planned scenarios appear in driver. Regex pre-check, LLM if needed."""
     task_id = state["task_id"]
 
-    # ── Pre-check: regex-scan driver for scenarios (no LLM call if all found) ──
+    # Pre-check: regex-scan driver for scenarios (skip LLM if all found)
     try:
         checklist = json.loads(state["scenarios"])
         missing = []
         for key in checklist.keys():
-            # AutoBench format: scenario keys become "scenario_name = value" or "scenario_name" in Verilog
             search_key = key.replace(" ", " = ")
             if search_key not in state["driver_code"] and key not in state["driver_code"]:
                 missing.append(key)
@@ -192,7 +191,7 @@ def checklist_node(state: BenchState) -> dict:
             print(f"[{task_id}] Checklist: all scenarios found (pre-check). Skipping LLM.")
             return {}
     except Exception:
-        missing = None  # can't parse JSON → fall through to LLM
+        missing = None
 
     print(f"[{task_id}] Stage checklist: Verifying coverage..." +
           (f" ({len(missing)} missing)" if missing else ""))
@@ -241,7 +240,7 @@ def checker_cmb_node(state: BenchState) -> dict:
     return {"checker_code": checker_code + STAGEPYGEN_TAIL}
 
 
-# ── SEQ Path ──
+# â”€â”€ SEQ Path â”€â”€
 
 def driver_seq_node(state: BenchState) -> dict:
     """Stage 4 SEQ: Complete Verilog testbench skeleton."""
@@ -259,6 +258,8 @@ def driver_seq_node(state: BenchState) -> dict:
     prompt += "IMPORTANT - test scenario:\n" + state["scenarios"] + "\n\n"
     prompt += "below is the given testbench codes:\n" + tb_obj.gen_template() + "\n\n"
     prompt += txt2
+    if VCD_ENABLED:
+        prompt += VCD_INSTRUCTION_SEQ
 
     llm = get_llm()
     response = llm.invoke(prompt)
@@ -310,7 +311,7 @@ def checker_seq_node(state: BenchState) -> dict:
     return {"checker_code": checker_code + STAGE5_SEQ_CODE1 + STAGE5_SEQ_CODE2}
 
 
-# ── Shared   End Nodes ──
+# â”€â”€ Shared   End Nodes â”€â”€
 
 def simulation_node(state: BenchState) -> dict:
     """Run Icarus Verilog + Python checker."""
@@ -358,7 +359,11 @@ def debug_node(state: BenchState) -> dict:
     sim_error = state.get("sim_error", "")
     sim_passed = state.get("sim_passed", False)
 
-    # Decide what to fix: iverilog fails → fix Verilog; checker fails → fix Python
+    # Include diagnosis if available (from vcd_node)
+    diagnosis = state.get("waveform_analysis", "")
+    diagnosis_hint = f"\n\nDiagnosis of the failure (use this to target your fix):\n{diagnosis}" if diagnosis and diagnosis != "placeholder" else ""
+
+    # Decide what to fix: iverilog fails â†’ fix Verilog; checker fails â†’ fix Python
     is_python_error = sim_passed or "python" in sim_error.lower() or "checker" in sim_error.lower() or "traceback" in sim_error.lower() or "indexerror" in sim_error.lower() or "typeerror" in sim_error.lower() or "attributeerror" in sim_error.lower()
 
     if is_python_error and state.get("checker_code"):
@@ -372,7 +377,7 @@ previous python code with error:
 {state['checker_code']}
 
 compiling error message:
-{sim_error}"""
+{sim_error}{diagnosis_hint}"""
         llm = get_llm()
         response = llm.invoke(prompt)
         fixed = extract_code(response.content, "python")[-1] if extract_code(response.content, "python") else response.content
@@ -384,6 +389,7 @@ compiling error message:
             driver_code=state["driver_code"],
             sim_error=sim_error
         )
+        prompt += diagnosis_hint
         llm = get_llm()
         response = llm.invoke(prompt)
         fixed = extract_code(response.content, "verilog")[-1]
@@ -416,9 +422,11 @@ def eval_node(state: BenchState) -> dict:
     work_dir = f"../runs/{task_id}/eval2/"
     os.makedirs(work_dir, exist_ok=True)
     matched = 0
+    evaluated = 0
     for idx, mutant_code in enumerate(mutants):
-        # ── 1. Run GOLDEN TB against mutant ──
+        # 1. Run GOLDEN TB against mutant
         gold_pass = False
+        gold_valid = False
         if golden_tb:
             try:
                 gold_dir = os.path.join(work_dir, f"golden_{idx}")
@@ -429,12 +437,16 @@ def eval_node(state: BenchState) -> dict:
                     f.write(golden_tb)
                 gold_result = iverilog_call_and_save(gold_dir, silent=True, timeout=30)
                 if gold_result[0] and gold_result[4]:
+                    gold_valid = True
                     vvp_out = gold_result[4].out if hasattr(gold_result[4], 'out') else str(gold_result[4])
                     gold_pass = "Mismatches: 0 in" in vvp_out or "All test cases passed" in vvp_out
             except Exception:
-                gold_pass = False
+                gold_valid = False
 
-        # ── 2. Run GENERATED TB against mutant ──
+        if not gold_valid:
+            continue
+
+        # â”€â”€ 2. Run GENERATED TB against mutant â”€â”€
         gen_pass = False
         try:
             gen_dir = os.path.join(work_dir, f"gen_{idx}")
@@ -456,12 +468,16 @@ def eval_node(state: BenchState) -> dict:
         except Exception:
             gen_pass = False
 
-        # ── 3. Verdicts match? ──
+        # 3. Verdicts match?
         if gold_pass == gen_pass:
-            matched += 1  # both pass or both fail = our TB agrees with golden TB
+            matched += 1
+        evaluated += 1
 
-    ratio = f"{matched}/{len(mutants)}"
-    eval2 = matched >= len(mutants) * 0.8  # AutoBench's LOOSE_FACTOR = 0.8
+    if evaluated == 0:
+        return {"eval0_passed": True, "eval1_passed": eval1, "eval2_passed": False,
+                "eval2_mutant_ratio": "0/0 (no valid golden verdicts)"}
+    ratio = f"{matched}/{evaluated}"
+    eval2 = matched >= evaluated * 0.8
 
     return {
         "eval0_passed": True,
@@ -472,9 +488,73 @@ def eval_node(state: BenchState) -> dict:
 
 
 def vcd_node(state: BenchState) -> dict:
+    """Analyze simulation signal data to diagnose WHY a testbench failed."""
     task_id = state["task_id"]
-    print(f"[{task_id}] VCD Analysis: placeholder...")
-    return {"waveform_analysis": "placeholder"}
+    if state.get("sim_passed"):
+        return {"waveform_analysis": "PASSED â€” no diagnosis needed."}
+
+    print(f"[{task_id}] VCD Analysis: Diagnosing failure...")
+
+    # Read signal data: VCD file (if enabled) or TBout.txt (fallback)
+    signal_table = "(no signal data)"
+    if VCD_ENABLED:
+        vcd_path = f"../runs/{task_id}/dump.vcd"
+        if os.path.exists(vcd_path):
+            try:
+                from vcdvcd import VCDVCD
+                vcd = VCDVCD(vcd_path)
+                lines = []
+                for sig_name in vcd.signals:
+                    sig_data = vcd[sig_name]
+                    changes = sig_data.tv if hasattr(sig_data, 'tv') else []
+                    if changes:
+                        values = ", ".join(f"{t}={v}" for t, v in changes[:10])
+                        lines.append(f"{sig_name}: {values}")
+                signal_table = "\n".join(lines) if lines else "(empty VCD)"
+            except Exception:
+                pass  # fall through to TBout.txt
+    if signal_table == "(no signal data)":
+        tbout_path = f"../runs/{task_id}/TBout.txt"
+        if os.path.exists(tbout_path):
+            with open(tbout_path) as f:
+                signal_lines = f.read().strip().splitlines()[:40]
+            signal_table = "\n".join(signal_lines) if signal_lines else "(no signal data)"
+
+    # Build context: what should the circuit do?
+    spec = state.get("spec", "")[:300]
+    rules = state.get("golden_rules", "")[:500]
+    description = state.get("problem_description", "")[:200]
+
+    prompt = f"""Diagnose a hardware testbench failure.
+
+## Circuit Description
+{description}
+
+## Expected Behavior (Golden Rules)
+```python
+{rules}
+```
+
+## Actual Signal Output (TBout.txt)
+{signal_table}
+
+## Error
+{state.get('sim_error', 'No error captured')[:400]}
+
+## Instructions
+1. If the error is a COMPILATION ERROR (syntax, undefined macro): state the exact error and suggest a Verilog fix.
+2. If signals are present: compare each signal against the expected behavior from the golden rules above.
+3. Identify WHICH signal is wrong, at WHICH scenario, and what the CORRECT value should be.
+4. Determine root cause: timing issue? wrong expected value? missing test case?
+5. Suggest ONE specific fix for the testbench code.
+
+Reply in 2-4 sentences. Be specific â€” mention signal names and scenario numbers."""
+
+    llm = get_llm()
+    response = llm.invoke(prompt)
+    diagnosis = response.content.strip()
+    print(f"[{task_id}] Diagnosis: {diagnosis[:200]}...")
+    return {"waveform_analysis": diagnosis}
 
 
 def reboot_node(state: BenchState) -> dict:
@@ -490,193 +570,4 @@ def reboot_node(state: BenchState) -> dict:
     return result
 
 
-# ═══════════════════════════════════════════════════
-# Routing
-# ═══════════════════════════════════════════════════
-
-def should_retry(state: BenchState) -> str:
-    """After simulation: eval (pass), debug (fix), or reboot (regenerate)."""
-    if state.get("sim_passed", False):
-        return "eval"
-    if state.get("reboot_count", 0) >= 2:
-        return "eval"           # max 2 reboots, then give up
-    total = state.get("debug_iter", 0) + state.get("reboot_count", 0)
-    if total >= 5:
-        return "eval"           # exhausted, mark as failed
-    if state.get("debug_iter", 0) >= 2:
-        return "reboot"         # 2 debugs failed → regenerate
-    return "debug"
-
-
-def route_circuit(state: BenchState) -> str:
-    return "cmb" if state["circuit_type"] == "CMB" else "seq"
-
-
-# ═══════════════════════════════════════════════════
-# Build Graph
-# ═══════════════════════════════════════════════════
-
-def build_graph() -> StateGraph:
-    builder = StateGraph(BenchState)
-
-    # Shared stages
-    builder.add_node("classify", classify_node)
-    builder.add_node("spec", spec_node)
-    builder.add_node("scenarios", scenarios_node)
-    builder.add_node("rules", rules_node)
-
-    # CMB path
-    builder.add_node("driver_cmb", driver_cmb_node)
-    builder.add_node("checklist", checklist_node)
-    builder.add_node("checker_cmb", checker_cmb_node)
-
-    # SEQ path
-    builder.add_node("driver_seq", driver_seq_node)
-    builder.add_node("stage4b", stage4b_node)
-    builder.add_node("checker_seq", checker_seq_node)
-
-    # Shared end
-    builder.add_node("simulation", simulation_node)
-    builder.add_node("debug", debug_node)
-    builder.add_node("reboot", reboot_node)
-    builder.add_node("eval", eval_node)
-    builder.add_node("vcd", vcd_node)
-
-    # Linear: START → classify → spec → scenarios → rules
-    builder.add_edge(START, "classify")
-    builder.add_edge("classify", "spec")
-    builder.add_edge("spec", "scenarios")
-    builder.add_edge("scenarios", "rules")
-
-    # Branch CMB vs SEQ
-    builder.add_conditional_edges("rules", route_circuit, {
-        "cmb": "driver_cmb",
-        "seq": "driver_seq",
-    })
-
-    # CMB path
-    builder.add_edge("driver_cmb", "checklist")
-
-    # SEQ path
-    builder.add_edge("driver_seq", "checklist")
-
-    # Branch after checklist based on circuit type
-    builder.add_conditional_edges("checklist", route_circuit, {
-        "cmb": "checker_cmb",
-        "seq": "stage4b",
-    })
-    builder.add_edge("stage4b", "checker_seq")
-
-    # Merge at simulation
-    builder.add_edge("checker_cmb", "simulation")
-    builder.add_edge("checker_seq", "simulation")
-
-    # Debug loop with reboot
-    builder.add_conditional_edges("simulation", should_retry, {
-        "eval": "eval",
-        "debug": "debug",
-        "reboot": "reboot",
-    })
-    builder.add_edge("debug", "simulation")
-    builder.add_edge("reboot", "simulation")
-
-    # Eval → VCD → END
-    builder.add_edge("eval", "vcd")
-    builder.add_edge("vcd", END)
-
-    return builder.compile()
-
-
-# ═══════════════════════════════════════════════════
-# Run
-# ═══════════════════════════════════════════════════
-
-if __name__ == "__main__":
-    graph = build_graph()
-    # Skip already-tested + problems that hang DeepSeek on large prompts
-    # Load already-completed problems
-    results_path = "../results/graph_results.json"
-    skip_set = set()
-    if os.path.exists(results_path):
-        with open(results_path) as f:
-            for r in json.load(f):
-                skip_set.add(r["task_id"])
-    # Large SEQ circuits — stage4b prompt too big, DeepSeek hangs
-    skip_set.update({"lemmings4", "gshare", "review2015_fancytimer", "lemmings3",
-                     "circuit10", "review2015_fsm", "2013_q2bfsm"})
-    with open("../data/HDLBits/HDLBits_data.jsonl") as f:
-        problems = [json.loads(line) for line in f.readlines()][:10]
-        problems = [p for p in problems if p["task_id"] not in skip_set]
-
-    results = []
-    for i, prob in enumerate(problems):
-        print(f"\n{'='*60}")
-        print(f"PROBLEM {i+1}/{len(problems)}: {prob['task_id']}")
-        print(f"{'='*60}")
-
-        result = graph.invoke({
-            "task_id": prob["task_id"],
-            "task_number": prob["task_number"],
-            "problem_description": prob["description"],
-            "dut_header": prob["header"],
-            "dut_code": prob["module_code"],
-            "circuit_type": "",
-            "spec": "",
-            "scenarios": "",
-            "golden_rules": "",
-            "driver_code": "",
-            "checker_code": "",
-            "sim_passed": False,
-            "sim_output": "",
-            "sim_error": "",
-            "debug_iter": 0,
-            "reboot_count": 0,
-            "eval0_passed": False,
-            "eval1_passed": False,
-            "eval2_passed": False,
-            "eval2_mutant_ratio": "",
-            "vcd_path": "",
-            "waveform_analysis": "",
-            "errors": [],
-        })
-
-        results.append({
-            "task_id": prob["task_id"],
-            "circuit_type": result["circuit_type"],
-            "sim_passed": result["sim_passed"],
-            "eval0": result["eval0_passed"],
-            "eval1": result.get("eval1_passed"),
-            "eval2": result.get("eval2_passed"),
-            "eval2_ratio": result.get("eval2_mutant_ratio"),
-        })
-        print(f"{prob['task_id']}: {result['circuit_type']}, "
-              f"pass={result['sim_passed']}, E2={result.get('eval2_mutant_ratio','?')}, "
-              f"debug={result['debug_iter']}")
-
-        # Save incrementally every 10 problems
-        if (i + 1) % 10 == 0:
-            save_path = "../results/graph_results.json"
-            os.makedirs("../results", exist_ok=True)
-            with open(save_path, "w") as f:
-                json.dump(results, f, indent=2)
-            print(f"  [Saved {len(results)} results]")
-
-    # Summary
-    passed = sum(1 for r in results if r["sim_passed"])
-    eval0 = sum(1 for r in results if r.get("eval0"))
-    eval1 = sum(1 for r in results if r.get("eval1"))
-    eval2 = sum(1 for r in results if r.get("eval2"))
-    cmb = sum(1 for r in results if r["circuit_type"] == "CMB")
-    seq = sum(1 for r in results if r["circuit_type"] == "SEQ")
-    print(f"\n{'='*60}")
-    if len(results) != 0:
-        print(f"SUMMARY: {passed}/{len(results)} sim passed ({passed/len(results)*100:.1f}%)")
-    print(f"Eval0: {eval0}, Eval1: {eval1}, Eval2: {eval2}")
-    print(f"CMB: {cmb}, SEQ: {seq}")
-
-    # Final save
-    save_path = "../results/graph_results.json"
-    os.makedirs("../results", exist_ok=True)
-    with open(save_path, "w") as f:
-        json.dump(results, f, indent=2)
-    print(f"\n[Results saved to {save_path}]")
+# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•

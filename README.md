@@ -22,9 +22,7 @@ with deterministic guards (prerequisites, debug/reboot budgets, timeouts)
 
 - **LLM**: DeepSeek (`deepseek-coder`) via `ChatOpenAI`, temperature 0
 - **Tools**: LangChain `@tool` wrappers around the verbatim AutoBench prompt pipeline (`src/reki3/core/`)
-- **State**: typed `AgentState` channels. Two bridges, selected by env key `REKI3_STATE_BRIDGE`:
-  - `shared` (default) — shared mutable dict + write-back echo
-  - `injected` — LangGraph-native `InjectedState` + `Command(update=…)`
+- **State**: typed `AgentState` channels, LangGraph-native — tools read state via `InjectedState` and write back via `Command(update=…)`
 - **VCD diagnosis**: `$dumpfile`/`$dumpvars` in drivers → `vcdvcd` parsing → LLM root-cause diagnosis fed into the next debug fix
 
 ## Dataset & Evaluation
@@ -65,7 +63,6 @@ pip install -r requirements.txt
 
 cd /mnt/d/Projects/REKI.3-GraphBench/src
 python -m reki3.run_benchmark                        # full benchmark (resumes from results/)
-REKI3_STATE_BRIDGE=injected python -m reki3.run_benchmark   # LangGraph-native state bridge
 ```
 
 ## Prior Work

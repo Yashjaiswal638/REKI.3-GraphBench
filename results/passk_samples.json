@@ -1,0 +1,2718 @@
+{
+  "samples": {
+    "mux2to1v": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "m2014_q6b": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "ringer": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "alwaysblock1": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 1
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "zero": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "circuit7": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "ece241_2014_q5a": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "fsm3": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "vector2": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "5/5",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "m2014_q4c": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "mt2015_q4a": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "shift18": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      }
+    ],
+    "ece241_2013_q8": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "m2014_q6": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 1,
+        "reboot_count": 2
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "fsm_ps2data": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "2012_q2b": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "vector0": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "kmap4": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "vector1": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "norgate": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "alwaysblock2": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "m2014_q6c": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "mux256to1": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "2014_q4a": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "ece241_2014_q4": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/9",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "circuit4": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "rule110": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "fsm3s": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "circuit5": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 2,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 3,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "bugs_mux2": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "4/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "4/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "4/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "4/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "4/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "mt2015_muxdff": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "edgecapture": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "dff8": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "6/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "ece241_2014_q1c": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "review2015_fsmonehot": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "counter_2bc": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "always_casez": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 1
+      },
+      {
+        "run": 1,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 1,
+        "reboot_count": 2
+      },
+      {
+        "run": 2,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 3,
+        "error": "Recursion limit of 60 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+      },
+      {
+        "run": 4,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      }
+    ],
+    "always_nolatches": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "m2014_q4j": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "history_shift": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 3,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 4,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "wire_decl": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "dff": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "5/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "5/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "5/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "ece241_2013_q12": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 2
+      }
+    ],
+    "thermostat": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "ece241_2013_q2": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "lfsr32": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "circuit3": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "7420": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": false,
+        "eval0_passed": false,
+        "eval1_passed": false,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "0/0",
+        "debug_iter": 0,
+        "reboot_count": 2
+      }
+    ],
+    "popcount255": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "gatesv": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": false,
+        "eval2_mutant_ratio": "7/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "circuit6": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "countslow": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "m2014_q4f": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "m2014_q4h": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/9",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "fsm1": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "dualedge": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "xnorgate": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "mt2015_q4": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "8/10",
+        "debug_iter": 1,
+        "reboot_count": 0
+      }
+    ],
+    "rotate100": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 1
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "10/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ],
+    "review2015_count1k": [
+      {
+        "run": 0,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 1,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      },
+      {
+        "run": 2,
+        "sim_passed": true,
+        "eval0_passed": true,
+        "eval1_passed": true,
+        "eval2_passed": true,
+        "eval2_mutant_ratio": "9/10",
+        "debug_iter": 0,
+        "reboot_count": 0
+      }
+    ]
+  }
+}
